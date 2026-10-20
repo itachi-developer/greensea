@@ -7,6 +7,7 @@ import GlobalChatScreen from '../screens/GlobalChatScreen';
 export type RootStackParamList = {
   Home: undefined;
   Paradox: undefined;
+  Arenas: undefined;
   GlobalChat: undefined;
 };
 
@@ -17,25 +18,31 @@ export default function AppNavigator() {
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{
-        headerStyle: { backgroundColor: '#ffffff' },
-        headerTintColor: '#007AFF',
-        headerTitleStyle: { fontWeight: '600' },
+        headerStyle: { backgroundColor: '#0B0D17' },
+        headerTintColor: '#00F0FF',
+        headerTitleStyle: { fontWeight: '700' },
+        contentStyle: { backgroundColor: '#0B0D17' },
       }}
     >
       <Stack.Screen
         name="Home"
         component={HomeScreen}
-        options={{ title: 'Home' }}
+        options={{ headerShown: false }}
       />
       <Stack.Screen
         name="Paradox"
         component={ParadoxScreen}
-        options={{ title: 'Paradox' }}
+        options={{ title: 'Il Paradosso' }}
+      />
+      <Stack.Screen
+        name="Arenas"
+        component={ParadoxScreen}
+        options={{ title: 'Arene Multiplayer' }}
       />
       <Stack.Screen
         name="GlobalChat"
         component={GlobalChatScreen}
-        options={{ title: 'Global Chat' }}
+        options={{ title: 'Salotto Sociale' }}
       />
     </Stack.Navigator>
   );
