@@ -14,6 +14,9 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
 interface EvaluationResult {
   multiplier: number;
@@ -22,6 +25,8 @@ interface EvaluationResult {
 }
 
 export default function ParadoxScreen() {
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
+
   // Dati della sfida corrente (fittizi per il gameplay)
   const challenge = {
     imageUrl: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800&auto=format&fit=crop&q=80',
@@ -106,10 +111,7 @@ export default function ParadoxScreen() {
 
   const handleGoToTurbine = () => {
     setModalVisible(false);
-    Alert.alert(
-      'La Turbina',
-      `Energia di ${scoreData?.energyEarned ?? 0} ⚡ convogliata con successo al nucleo della Turbina!`
-    );
+    navigation.navigate('Turbine');
   };
 
   const resetGame = () => {

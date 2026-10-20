@@ -2,11 +2,13 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '../screens/HomeScreen';
 import ParadoxScreen from '../screens/ParadoxScreen';
+import TurbineScreen from '../screens/TurbineScreen';
 import GlobalChatScreen from '../screens/GlobalChatScreen';
 
 export type RootStackParamList = {
   Home: undefined;
   Paradox: undefined;
+  Turbine: undefined;
   Arenas: undefined;
   GlobalChat: undefined;
 };
@@ -33,6 +35,11 @@ export default function AppNavigator() {
         name="Paradox"
         component={ParadoxScreen}
         options={{ title: 'Il Paradosso' }}
+      />
+      <Stack.Screen
+        name="Turbine"
+        component={TurbineScreen}
+        options={{ title: 'La Turbina' }}
       />
       <Stack.Screen
         name="Arenas"
