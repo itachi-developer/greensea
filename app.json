@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "GreenSea",
+    "slug": "arena-app",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.greensea.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "L'app richiede l'accesso alla fotocamera per scattare foto profilo e condividere contenuti.",
+        "NSPhotoLibraryUsageDescription": "L'app richiede l'accesso alla galleria per caricare l'immagine del profilo."
+      }
+    },
+    "android": {
+      "package": "com.greensea.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#050B14",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.VIBRATE",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.VIBRATE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Consenti ad Arena App di accedere alle tue foto per impostare l'avatar."
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7fe8b49d-1508-42f4-9159-e93f72a1bbf7"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/7fe8b49d-1508-42f4-9159-e93f72a1bbf7"
+    }
+  }
+}
